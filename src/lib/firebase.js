@@ -24,4 +24,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+// Persistencia local (se recuerda la sesión)
+setPersistence(auth, browserLocalPersistence);
 export const db = getFirestore(app);
+export {
+  auth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut
+};

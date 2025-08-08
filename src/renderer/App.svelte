@@ -7,6 +7,8 @@
   import RightInspector from './main/user-interface/panels/RightInspector/RightInspector.svelte';
   import StatusBar from '../components/StatusBar.svelte';
   import LoginForm from '../components/LoginForm.svelte';
+  import { auth, onAuthStateChanged } from '../lib/firebase';
+  import { currentUser } from '@/stores/auth';
 
 // Estado del panel derecho
   let rightOpen = false;
