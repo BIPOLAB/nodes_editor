@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "module": "ESNext",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "checkJs": false
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "src/renderer/main.js",
+    "src/renderer/App.svelte"
+, "src/renderer/main/panels/MidiMonitor/MidiMonitor.store.ts", "src/renderer/main/panels/MidiMonitor/MidiMonitor.store.ts"  ]
+}
