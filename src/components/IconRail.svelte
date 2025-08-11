@@ -34,5 +34,4 @@
     </button>
   {/each}
 
-  <div class="mt-auto mb-2 text-gray-500 text-xs opacity-60">v1.0</div>
 </nav>

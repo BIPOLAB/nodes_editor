@@ -3,17 +3,23 @@
   import IconRail from '../components/IconRail.svelte';
   import LeftExplorer from './main/user-interface/panels/LeftExplorer/LeftExplorer.svelte';
   import TopCommandBar from '../components/TopCommandBar.svelte';
-  import Workspace from '../components/Workspace.svelte';
+  import NoDevice from '../components/NoDevice.svelte';
   import RightInspector from './main/user-interface/panels/RightInspector/RightInspector.svelte';
   import StatusBar from '../components/StatusBar.svelte';
   import LoginForm from '../components/LoginForm.svelte';
-  import { auth, onAuthStateChanged } from '../lib/firebase';
-  import { currentUser } from '@/stores/auth';
+  import { auth, onAuthStateChanged } from './lib/firebase';
+  import { currentUser } from './stores/auth';
+  import { onMount } from 'svelte';
 
 // Estado del panel derecho
   let rightOpen = false;
   let rightPanel = null; // 'login' | 'inspector' | null
-
+ onMount(() => {
+    const unsub = onAuthStateChanged(auth, (user) => {
+      currentUser.set(user);
+    });
+    return () => unsub();
+  });
   // Cuando se hace click en un item del rail
   function handleRailAction(e) {
     const { id } = e.detail; // 'home','configs','profile','cloud','wifi'...
@@ -60,7 +66,7 @@
     <!-- Centro -->
     <section class="flex-1 flex flex-col min-w-0 bg-[#24323a]">
       <TopCommandBar/>
-      <Workspace/>
+      <NoDevice/>
     </section>
 
     <!-- Sidebar derecha: colapsable -->

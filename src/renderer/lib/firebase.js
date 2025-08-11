@@ -4,9 +4,13 @@ import {
   getAuth,
   setPersistence,
   browserLocalPersistence,
-  signInWithEmailAndPassword,
+  signOut,
   onAuthStateChanged,
-  signOut
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup
 } from 'firebase/auth';
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -28,9 +32,18 @@ const auth = getAuth(app);
 // Persistencia local (se recuerda la sesión)
 setPersistence(auth, browserLocalPersistence);
 export const db = getFirestore(app);
+// Exporta TODO lo que usa tu modal
 export {
   auth,
-  signInWithEmailAndPassword,
+  // estado
   onAuthStateChanged,
-  signOut
+  // sesión
+  signOut,
+  // email/pass
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  // Google
+  GoogleAuthProvider,
+  signInWithPopup
 };

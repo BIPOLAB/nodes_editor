@@ -4,4 +4,7 @@ import App from './App.svelte';
 import './app.css'; // o el nombre correcto del archivo
 mount(App, {
   target: document.body,
+ 
+  
 });
+ console.log('Hello from Svelte main.js');

@@ -17,5 +17,5 @@
     "src/**/*.svelte",
     "src/renderer/main.js",
     "src/renderer/App.svelte"
-, "src/renderer/main/panels/MidiMonitor/MidiMonitor.store.ts", "src/renderer/main/panels/MidiMonitor/MidiMonitor.store.ts"  ]
+, "src/renderer/main/panels/MidiMonitor/MidiMonitor.store.ts", "src/renderer/main/panels/MidiMonitor/MidiMonitor.store.ts", "src/renderer/lib/menu.icons.ts", "src/renderer/lib/menu.icons.ts"  ]
 }

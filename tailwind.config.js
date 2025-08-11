@@ -2,7 +2,7 @@ import * as colors from "tailwindcss/colors";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js,svelte,ts}",
+    "./src/renderer/**/*.{html,js,svelte,ts}",
     "./node_modules/grid-uikit/src/**/*.{html,js,svelte,ts}",
     "./src/renderer/**/*.{html,js,svelte,ts}"
   ],

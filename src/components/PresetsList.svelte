@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { buscarPresets,obtenerPresetsPrueba } from '../lib/presets.js';
+  import { buscarPresets,obtenerPresetsPrueba } from '../renderer/lib/presets.js';
   import BotonCargarMas from './BotonCargarMas.svelte';
 
   export let titulo = "🎼 Buscar presets";
